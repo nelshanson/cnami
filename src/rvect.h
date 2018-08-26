@@ -1,6 +1,4 @@
-#ifndef RVECT_H
-#define RVECT_H
-
+#pragma once
 #include <stdlib.h>
 
 typedef struct {
@@ -22,4 +20,8 @@ rvect_t *rvect_new(const size_t n);
  */
 size_t rvect_free(rvect_t *vec);
 
-#endif
+void rvect_print(const rvect_t *vec);
+void axpy(const double a, rvect_t *x, const rvect_t *y);
+void vect_sum(rvect_t *x, const rvect_t *y);
+void scal_add(const double a, rvect_t *x);
+void scal_mult(const double a, rvect_t *x);
