@@ -1,0 +1,2 @@
+#define Cnami_VERSION_MAJOR @Cnami_VERSION_MAJOR@
+#define Cnami_VERSION_MINOR @Cnami_VERSION_MINOR@
