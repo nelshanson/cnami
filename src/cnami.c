@@ -1,6 +1,8 @@
 #include <stdio.h>
 #include <math.h>
 #include "CnamiConfig.h"
+#include "utils.h"
+
 
 int main(int argc, char **argv) {
   
@@ -22,10 +24,7 @@ int main(int argc, char **argv) {
     u[i] = exp(-decay * x);
   }
 
-  for (size_t i = 0; i < im; ++i) {
-    printf("%f ", u[i]);
-  }
-  printf("\n");
+  print_array(u, im);
 
   for (size_t n = 0; n < nm; ++n) {
     du[0] = u[0] - u[im-1];
@@ -38,11 +37,7 @@ int main(int argc, char **argv) {
       u[i] = u[i] - c * du[i] / dx * dt;
     }
 
-    for (size_t i = 0; i < im; ++i) {
-      printf("%f ", u[i]);
-    }
-    printf("\n");
-
+    print_array(u, im);
   }
 
   return 0;

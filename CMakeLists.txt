@@ -16,6 +16,8 @@ include_directories("./bin")
 
 # Add the executable
 add_executable(Cnami ./src/cnami.c)
+add_library(utils ./src/utils.c)
 
 # Link libraries
 target_link_libraries(Cnami m)
+target_link_libraries(Cnami utils)
